@@ -1,0 +1,62 @@
+<%= form_with(model: title) do |form| %>
+  <% if title.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(title.errors.count, "error") %> prohibited this title from being saved:</h2>
+
+      <ul>
+        <% title.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :tconst, style: "display: block" %>
+    <%= form.text_field :tconst %>
+  </div>
+
+  <div>
+    <%= form.label :titleType, style: "display: block" %>
+    <%= form.text_field :titleType %>
+  </div>
+
+  <div>
+    <%= form.label :primaryTitle, style: "display: block" %>
+    <%= form.text_field :primaryTitle %>
+  </div>
+
+  <div>
+    <%= form.label :originalTitle, style: "display: block" %>
+    <%= form.text_field :originalTitle %>
+  </div>
+
+  <div>
+    <%= form.label :isAdult, style: "display: block" %>
+    <%= form.text_field :isAdult %>
+  </div>
+
+  <div>
+    <%= form.label :startYear, style: "display: block" %>
+    <%= form.text_field :startYear %>
+  </div>
+
+  <div>
+    <%= form.label :endYear, style: "display: block" %>
+    <%= form.text_field :endYear %>
+  </div>
+
+  <div>
+    <%= form.label :runtimeMinutes, style: "display: block" %>
+    <%= form.text_field :runtimeMinutes %>
+  </div>
+
+  <div>
+    <%= form.label :genres, style: "display: block" %>
+    <%= form.text_field :genres %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
