@@ -7,4 +7,7 @@ class Name
   field :deathYear, type: String
   field :primaryProfession, type: String
   field :knownForTitles, type: String
+
+  index({ primaryName: 1 })
+  index({ birthYear: -1 })
 end

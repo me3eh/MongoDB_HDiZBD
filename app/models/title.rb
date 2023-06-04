@@ -10,4 +10,5 @@ class Title
   field :endYear, type: String
   field :runtimeMinutes, type: String
   field :genres, type: String
+  has_one :rating, foreign_key: :tconst, primary_key: :tconst
 end

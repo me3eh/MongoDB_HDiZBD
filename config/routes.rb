@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   resources :titles
   resources :posts
-  resources :zadania, only: [:index, :show]
+  resources :zadania, only: [:index, :show] do
+    collection do
+      post :zadanie8, defaults: {format: :turbo_stream}
+    end
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
