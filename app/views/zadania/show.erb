@@ -1,4 +1,4 @@
-<%= form_with model: Title, url: zadanie8_zadania_path, data: { turbo: true, turbo_method: :post } do |f| %>
+<%= form_with model: Title, url: zadanie8_zadania_path, data: { turbo: true } do |f| %>
   <%= f.label "Title of film" %>
   <%= f.text_field :title %>
   <%= f.label "Starting year" %>
@@ -6,9 +6,5 @@
   <%= f.submit "Submit" %>
 <% end %>
 
-<div id="generate-lol">
-  <div>
-    <h1>Generate LOL</h1>
-    <p>Click the button to generate LOL.</p>
-  </div>
+<div id="kupp">
 </div>

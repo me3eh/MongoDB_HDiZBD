@@ -10,7 +10,7 @@ module Zadanka
       title = Title.find_by(primaryTitle: "Blade Runner", startYear: "1982")
       { result: :failure, "message": "Blade Runner does not exist" } if title.nil?
 
-      title.update("rating": { averageRating: title.rating.averageRating, numVotes: title.rating.numVotes })
+      title.update("rating2": { averageRating: title.rating.averageRating, numVotes: title.rating.numVotes })
       { result: :success, "message": "Succesfully updated rating for Blade Runner" }
     end
   end

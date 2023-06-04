@@ -1,6 +1,8 @@
 class Title
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Mongoid::Attributes::Dynamic
+
   field :tconst, type: String
   field :titleType, type: String
   field :primaryTitle, type: String
