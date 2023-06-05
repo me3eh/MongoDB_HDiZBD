@@ -9,7 +9,7 @@ module Zadanka
       title = Title.find_or_create_by(primaryTitle: "Pan Tadeusz", startYear: "1999")
       title.update("avgRating": 9.1)
 
-      { result: :success, "message": "Succesfully updated rating for Pan Tadeusz" }
+      { result: :success, "message": title }
     end
   end
 end

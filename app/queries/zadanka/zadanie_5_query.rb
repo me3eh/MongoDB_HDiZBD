@@ -16,9 +16,9 @@ module Zadanka
     #
     # Index jest w modelu name
     def call
-      names = Name.where({primaryName: /fonda|coppola/i })
+      names = Name.only(:primaryName, :primaryProfession).where({primaryName: /fonda|coppola/i })
 
-      { first_5: names.first(5), size: names.size }
+      { first_5: names.first(5).map(&:attributes), size: names.size }
     end
   end
 end

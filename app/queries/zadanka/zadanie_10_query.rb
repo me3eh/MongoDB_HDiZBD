@@ -10,7 +10,7 @@ module Zadanka
       { result: :failure, "message": "Blade Runner does not exist" } if title.nil?
 
       title.update("rating2": [ title["rating2"], { averageRating: 10, numVotes: 12345 } ] )
-      { result: :success, "message": "Succesfully updated rating for Blade Runner" }
+      { result: :success, "message": title }
     end
   end
 end

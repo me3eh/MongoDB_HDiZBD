@@ -17,7 +17,7 @@ module Zadanka
           }
         }, 1989]}})
 
-      title.destroy_all
+      # title.delete_all
       { result: :success, "message": "Deleted: #{title.size}" }
     end
   end
